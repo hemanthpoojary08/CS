@@ -1,0 +1,16 @@
+{
+"Version":"2012-10-17",
+"Statements":[
+{"Sid":"VisualEditor0",
+"Effect":"Allow",
+"Actions":[
+"dynamodb:PutItem",
+"dynamodb:DeleteItem",
+"dynamodb:GetItem",
+"dynamodb:Scan",
+"dynamodb:Query",
+"dynamodb:UpdateItem",
+],
+"Resource":""
+}]
+}

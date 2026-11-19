@@ -1,0 +1,106 @@
+***App.js***
+
+import React from 'react';
+import Greet from './props';
+import Counter from './state';
+
+function App() {
+  return (
+    <div className="app">
+      <Greet name="Murali Karthik Holla .T" />
+      <Counter/>
+    </div>
+  );
+}
+
+export default App;
+
+***props.js***
+
+import React from 'react';
+import './props.css';
+
+
+const Greet = (props) => {
+    return (
+        <div id="props">
+            <h2>Welcome to props</h2>
+            <h2>Hello, {props.name}</h2>
+        </div>
+    );
+}
+
+export default Greet;
+
+***props.css***
+
+#props {
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #c3c3f7;
+}
+
+***state.js***
+
+import React from 'react';
+import './state.css';
+import { useState } from 'react';
+
+function Counter() {
+    const [count, Setcount] = useState(0);
+
+    const increment = () => {
+        Setcount(count + 1);
+    };
+
+    const decrement = () => {
+            Setcount(count - 1);
+    };
+
+    return (
+        <div className="state">
+            <h2>State</h2>
+            <h2>Count: {count}</h2>
+            <button id='increment'  onClick={increment}>Increment</button>
+            <button id='decrement'  onClick={decrement}>Decrement</button>
+        </div>
+    );
+}
+
+export default Counter;
+
+***state.css***
+.state {
+    width: 500px;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+    margin: 10px auto;
+    background-color: rgb(255, 250, 244);
+}
+
+button {
+    width: auto;
+    height: 30px;
+    font-size: 8px;
+    margin: 10px 10px;
+    border: none;
+    box-shadow: 2px 2px 5px 1px;
+}
+
+#increment {
+    background-color: rgba(114, 193, 253, 0.716);
+}
+
+#decrement {
+    background-color: #ffb0b0;
+}
+

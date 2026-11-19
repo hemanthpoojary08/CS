@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+    font-size:2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table{
+    height:400px;
+    width:auto;
+    border-collapse:collapse;
+    background-color: grey;
+}
+
+input[type="button"],input[type="input"]{
+    width:100%;
+    height: 100%;
+    border: none;
+    font-size: 1.5em;
+    border-radius: 3px;
+}
+
+#equal{
+    width:100%;
+    height:100%;
+    font-size: 1.5em;
+}
+#disp{
+    width:330px;
+    height:100%;
+    font-size: 1.5em;
+    border:none;
+    background-color: rgb(196, 248, 255);
+}

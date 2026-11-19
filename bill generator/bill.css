@@ -1,0 +1,55 @@
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    width: auto;
+    height: auto;
+}
+
+td,
+th,
+tr {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+input[type="number"] {
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+#item,
+#item-rs {
+    width: 70px;
+}
+
+#submit,
+#clear {
+    display: block;
+    margin: 10px auto;
+    height: 40px;
+    width: 100px;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#clear {
+    background-color: rgb(255, 54, 54);
+}
+
+#totalbill {
+    font-size: 0.8em;
+    font-family: 'Times New Roman', Times, serif;
+    visibility: hidden;
+
+}

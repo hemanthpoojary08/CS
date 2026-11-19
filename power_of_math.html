@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Power of Math</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        input {
+            width: 100px;
+            height: 30px;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script>
+        var callAPI = (num1, num2) => {
+            var myHeaders = new Headers();
+
+
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify({ "num1": num1, "num2": num2 });
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+            fetch("https://cqtbxg0qn6.execute-api.us-west-1.amazonaws.com/dev", requestOptions)
+                .then(response => response.text())
+                .then(result => alert(JSON.parse(result).body))
+                .catch(error => console.log('error', error));
+        }
+    </script>
+</head>
+
+<body>
+    <h1>TO THE POWER OF MATH</h1>
+    <form>
+        <label>Number </label>
+        <input type="text" id="num1">
+        <label> to the power of </label>
+        <input type="text" id="num2">
+        <button type="button" id="submit" onclick="callAPI(num1.value,num2.value)">CALCULATE</button>
+    </form>
+</body>
+
+</html>

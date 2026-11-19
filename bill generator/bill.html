@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill generator</title>
+    <link rel="stylesheet" href="bill.css">
+</head>
+
+<body>
+    <h2>Bill generator</h2>
+    <table border="2" align="center">
+        <tr>
+            <th></th>
+            <th>Item</th>
+            <th>Cost</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="check" id="pen" onclick="toggle(this.id)"></td>
+            <td id="item">Pen</td>
+            <td id="item-rs">Rs. 5</td>
+            <td><input type="number" id="pen-qty" min=0 onchange="update_amt(this.id,this.value)" disabled></td>
+            <td><input type="number" id="pen-amt" min=0 disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="check" id="book" onclick="toggle(this.id)"></td>
+            <td id="item">Book</td>
+            <td id="item-rs">Rs. 70</td>
+            <td><input type="number" id="book-qty" min=0 onchange="update_amt(this.id,this.value)" disabled></td>
+            <td><input type="number" id="book-amt" min=0 disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="check" id="soap" onclick="toggle(this.id)"></td>
+            <td id="item">Soap</td>
+            <td id="item-rs">Rs. 30</td>
+            <td><input type="number" id="soap-qty" min=0 onchange="update_amt(this.id,this.value)" disabled></td>
+            <td><input type="number" id="soap-amt" min=0 disabled></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="check" id="bag" onclick="toggle(this.id)"></td>
+            <td id="item">Bag</td>
+            <td id="item-rs">Rs. 450</td>
+            <td><input type="number" id="bag-qty" min=0 onchange="update_amt(this.id,this.value)" disabled></td>
+            <td><input type="number" id="bag-amt" min=0 disabled></td>
+        </tr>
+    </table>
+    <input type="button" id="submit" value="SUBMIT" onclick="calculate()">
+    <input type="button" id="clear" value="CLEAR" onclick="clearall()">
+
+    <div id="totalbill">
+        <h2>Total :<span id="total"></span><br>
+            CGST(8%) :<span id="cgst"></span><br>
+            SGST(8%) :<span id="sgst"></span><br>
+            Grand Total :<span id="gtotal"></span>
+        </h2>
+    </div>
+    <script src="bill.js"></script>
+
+</body>
+
+</html>
