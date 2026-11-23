@@ -1,0 +1,12 @@
+let message:string="Hello World";
+let heading=document.createElement("Hi");
+heading.textContent=message;
+document.body.appendChild(heading);
+
+
+
+Command
+
+npm install -g live-server
+tsc app.ts
+live-server
